@@ -156,7 +156,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"first_name\": \"Anna\",\r\n  \"last_name\": \"tes\",\r\n  \"email\": \"test.ddd22vgowalddska@2example.com\",\r\n  \"password\": \"supersecret123\",\r\n  \"organization_id\":1\r\n}\r\n\r\n",
+							"raw": "{\r\n  \"first_name\": \"Anna\",\r\n  \"last_name\": \"tes\",\r\n  \"email\": \"test.d55dd22vgowalddska@2example.com\",\r\n  \"password\": \"supersecret123\",\r\n  \"organization_id\":1\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -592,6 +592,152 @@
 								"pet",
 								"delete",
 								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visit",
+			"item": [
+				{
+					"name": "CreateVisit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"animal_id\": 4,//or employe_id \r\n  \"name\": \"TEST\",\r\n  \"description\": \"TEST\",\r\n  \"datetime_planned\": \"2026-06-15T14:30:00\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/visit/create",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"visit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListVisit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/visit/list",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"visit",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViewVisit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/visit/view/2",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"visit",
+								"view",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditVisit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Zaktualizowana wizyta\",\r\n  \"description\": \"Zmieniony opis\",\r\n  \"datetime_planned\": \"2025-06-22T14:30:00\",\r\n  \"animal_id\": 4\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/visit/edit/2",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"visit",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/ecmascript",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/visit/delete/5",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"visit",
+								"delete",
+								"5"
 							]
 						}
 					},
